@@ -54,6 +54,10 @@ static NSString *InstagramId = @"com.burbn.instagram";
     NSString    *objectAtIndex0 = [command argumentAtIndex:0];
     NSString    *caption = [command argumentAtIndex:1];
     
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    [pasteboard setValue:caption forPasteboardType:@"public.text"];
+
+    
     CDVPluginResult *result;
     
     NSURL *instagramURL = [NSURL URLWithString:@"instagram://app"];
