@@ -57,11 +57,7 @@ static NSString *InstagramId = @"com.burbn.instagram";
     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
     [pasteboard setValue:caption forPasteboardType:@"public.text"];
     
-    NSString *hint = @"Click and hold to paste a message or enter your own";
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:hint delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
-    [alert show];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2800 * NSEC_PER_MSEC), dispatch_get_main_queue(), ^{
-        [alert dismissWithClickedButtonIndex:-1 animated:YES];
+
     
     CDVPluginResult *result;
     
